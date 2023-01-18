@@ -20,5 +20,25 @@
     dots: false
   });
 
+  window.onload = function(){
+    let playerBlk = document.querySelector(".video_content"),
+        player = document.getElementById("player"),
+        play = document.getElementById("play");
+    
+        playerBlk.addEventListener('click', () => {
+            if (playerBlk.classList.contains('play')) {
+                playerBlk.classList.remove('play')
+                player.pause();
+            }else{
+                playerBlk.classList.add('play')
+                player.play();
+            } 
+        })
+    play.addEventListener("click",function(){
+        player.play();
+    });
+
+    
+}
  
 })(jQuery);
